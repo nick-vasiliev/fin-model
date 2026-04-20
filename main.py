@@ -1,9 +1,6 @@
 """
 main app
 """
-
-from pyexpat import model
-
 from models import Income, Period, Expense, Asset
 from scenarios import Scenario
 
