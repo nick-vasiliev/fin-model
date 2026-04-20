@@ -33,3 +33,4 @@ A class that holds a function that is applied to a *FinancialModel* every iterat
 
 I'm not sure if the Scenario is built in the best way. For what I can think of now this is the best way to have modular "things" that can affect the model for certain periods.
 It can definitely be optimised by tracking something like when the scenario goes inactive.
+There is a concern that two functions in a scenario use the same named keyword argument, so that's also not great.

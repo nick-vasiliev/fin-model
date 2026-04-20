@@ -3,6 +3,7 @@ main app
 """
 from models import Income, Period, Expense, Asset
 from scenarios import Scenario
+from scenarios.economic import inflation
 
 from engine import FinancialModel
 
@@ -49,7 +50,7 @@ if __name__ == "__main__":
     model = FinancialModel(starting_cash=0)
     model.add_income(Income("Job", 1000, Period.WEEKLY))
     model.add_scenario(six_months_unemployed_scenario)
+    model.add_scenario(Scenario(inflation.high_inflation))
     for _ in range(52):
         model.run()
-        print(model.cash)
     
