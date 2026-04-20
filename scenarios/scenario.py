@@ -21,3 +21,5 @@ class Scenario:
         result = self.func(model, self.iteration, **self.kwargs)
         self.kwargs = self.kwargs | result  # combine the result into the existing kwargs
         self.iteration += 1
+    
+    # TODO: some sort of handling to destroy the scenario when it goes inactive.
